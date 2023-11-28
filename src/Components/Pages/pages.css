@@ -81,7 +81,7 @@ h2 {
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 600;
-  color: #fff;
+  color: #000;
   padding: 10px;
 }
 
@@ -89,8 +89,13 @@ h2 {
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 600;
-  color: #fff;
+  color: indigo;
   padding: 10px;
+}
+
+span {
+  color: #fff;
+  padding: 30px;
 }
 
 #fals {
@@ -155,7 +160,7 @@ h2 {
 .ans {
   background-color: deeppink;
   width: 100vw;
-  height: 800px;
+  height: 1000px;
   padding: 20px;
 }
 
