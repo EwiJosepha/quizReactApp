@@ -16,7 +16,7 @@ const navigate = useNavigate()
         </div>
         <div className="button">
         <button id="start" onClick={()=>{
-          navigate("/Question")
+          navigate("/Question/1")
         }}>Start</button>
 
         </div>

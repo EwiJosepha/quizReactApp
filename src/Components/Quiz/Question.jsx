@@ -1,14 +1,15 @@
 import useFetch from "../Hooks/useFetch";
-import { useEffect, useState } from "react";
-import useLocalStorage from "use-local-storage";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Appcontext } from "../Hooks/Context";
 
 import "../Pages/pages.css";
+import { useContext } from "react";
 
 function Questions() {
-  const [truee, setTruee]= useState()
-  const [falsee, setFalsee]= useState()
-  const array= []
-
+  const {counter, setCounter}= useContext(Appcontext)
+  const { id } = useParams();
+  const navigate = useNavigate();
 
   let { data, isLoading, error } = useFetch();
   if (isLoading) {
@@ -18,74 +19,55 @@ function Questions() {
   if (error) {
     <h1>An error occured</h1>;
   }
+  console.log(id);
 
-  function handletrue () {
-  setTruee(true);
+  function handleclickeventss(e) {
+    const value = e.target.value;
+
+    console.log(value);
+    if (+id > 8) {
+      navigate("/Results")
+    }else if(val === data[id]?.correct_answer){
+      setCounter(counter + 1)
+    }else {
+      navigate(`/Question/${+id + 1}`);
+    }
+   
   }
 
-  function handlefalse (quest) {
-  setFalsee(false);
-  const falseval = JSON.stringify(localStorage.getItem("anser")) || []
-  const correctAns = quest.correct_answer
-  if(correctAns){
-    const rightans = falseval.filter((rightans) => rightans === falsee); // removing meal from localstorage
+  console.log(counter);
 
-    array.push(correctAns)
-    localStorage.setItem("anser", JSON.stringify(array));
-    console.log(rightans);
+  return (
+    data?.length > 0 && (
+      <>
+        <div className="ans">
+          <h2 id="title">
+            Click on either <span>True</span> or <span>False</span> to choose
+            the correct answer
+          </h2>
+          <hr />
+          {counter}
+          <div className="category">
+            <p>Question Category <br />{data[id]?.category}</p>
+          </div>
+          <div className="quest">
+            <h4 id="quizz">{data[id]?.question}</h4>
+          </div>
+          <div className="choice">
+            <button id="tru" value="true" onClick={handleclickeventss}>
+              True
+            </button>
+            <button id="fals" value="false" onClick={handleclickeventss}>
+              False
+            </button>
+          </div>
 
-  }else{
-    const updat=[...falseval, correctAns]
-    localStorage.setItem("anser", JSON.stringify(updat));
-
-  }
-//   const prevans = falseval.find((ans)=>{
-//     ans === correctAns 
-// })
-
- 
-
-
-
-
-  console.log(correctAns);
-
-  }
-
-  // const trueval = JSON.stringify(localStorage.setItem("anser", truee))
-  
-
-
-    // console.log(truee);
-    // console.log(falsee);
-    console.log(data);
-
-
-    return (
-    <>
-      <div className="ans">
-        <h2 id="title">
-          Click on either <span>True</span> or <span>False</span> to choose the
-          correct answer
-        </h2>
-        <hr />
-        {data?.map((quest) => (
-          <>
-            <div className="quest">
-              <h4 id="quizz">{quest.question}</h4>
-            </div>
-            <div className="choice">
-              <button id="tru" onClick={handletrue}>True</button>
-              <button id="fals" onClick={()=>handlefalse(quest)}>False</button>
-            </div>
-          </>
-        ))}
-
-        <div className="submit">
-          <button id="submit">Submit</button>
+          {/* <div className="submit">
+            <button id="submit">Submit</button>
+          </div> */}
         </div>
-      </div>
-    </>
+      </>
+    )
   );
 }
 export default Questions;

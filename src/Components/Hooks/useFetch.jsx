@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 function useFetch() {
+
   const [postperpage, setPostperpage]= useState(1)
   const [currentpage, setCurrentpage]= useState(1)
   const [amount, setAmount]= useState([])
@@ -12,11 +13,13 @@ function useFetch() {
     queryKey: ["quizz"],
     queryFn: async () => {
       const res = await axios.get(
-        `https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean`
+        "https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean"
       );
       return res.data.results
     },
   });
+
+  console.log(data);
 
   const indexoflastpage = currentpage * postperpage
   const indexoffirstpost = indexoflastpage - postperpage
