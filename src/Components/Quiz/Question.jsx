@@ -46,18 +46,18 @@ function Questions() {
 
   return (
     data?.length > 0 && (
-      <>
-        <div className="ans">
+      <><div className="body">
+        <div className="card">
+          <div className="card-header">
           <h2 id="title">
             Click on either <span>True</span> or <span>False</span> to choose
             the correct answer
           </h2>
-          <hr />
-          {counter}
-          <div className="category">
-            <p>Question Category <br />{data[id]?.category}</p>
           </div>
-          <div className="quest">
+          <div className="category">
+            <span id="cat">Question Category <br />{data[id]?.category}</span>
+          </div>
+          <div className="card-body">
             <h4 id="quizz">{data[id]?.question}</h4>
           </div>
           <div className="choice">
@@ -68,13 +68,26 @@ function Questions() {
               False
             </button>
           </div>
+          <div className="card-footer">
+          <p>© 2023 Your Company</p>
 
-          {/* <div className="submit">
-            <button id="submit">Submit</button>
-          </div> */}
+          </div>
+        </div>
         </div>
       </>
     )
   );
 }
 export default Questions;
+
+{/* <div class="card">
+<div class="card-header">
+  <h2>Card Title</h2>
+</div>
+<div class="card-body">
+  <p>This is a simple responsive card.</p>
+</div>
+<div class="card-footer">
+  <p>© 2023 Your Company</p>
+</div>
+</div> */}
