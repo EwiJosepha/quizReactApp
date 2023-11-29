@@ -27,12 +27,19 @@ function Questions() {
     console.log(value);
     if (+id > 8) {
       navigate("/Results")
-    }else if(val === data[id]?.correct_answer){
-      setCounter(counter + 1)
     }else {
       navigate(`/Question/${+id + 1}`);
     }
-   
+    const newval =data[id].correct_answer
+    console.log( newval);
+    console.log(value);
+    if(value === newval){
+      setCounter((counter)=>counter + 1)
+      console.log("plus one");
+    }
+
+  
+
   }
 
   console.log(counter);
@@ -54,10 +61,10 @@ function Questions() {
             <h4 id="quizz">{data[id]?.question}</h4>
           </div>
           <div className="choice">
-            <button id="tru" value="true" onClick={handleclickeventss}>
+            <button id="tru" value="True" onClick={(e)=>handleclickeventss(e, "True")}>
               True
             </button>
-            <button id="fals" value="false" onClick={handleclickeventss}>
+            <button id="fals" value="False" onClick={(e)=>handleclickeventss(e, "False")}>
               False
             </button>
           </div>
