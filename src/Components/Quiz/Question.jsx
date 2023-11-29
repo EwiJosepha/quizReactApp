@@ -25,10 +25,10 @@ function Questions() {
 
   function handlefalse (quest) {
   setFalsee(false);
-  const falseval = JSON.stringify(localStorage.getItem("anser") || [])
+  const falseval = JSON.stringify(localStorage.getItem("anser")) || []
   const correctAns = quest.correct_answer
   if(correctAns){
-    const rightans = falsee.filter((rightans) => rightans === falsee); // removing meal from localstorage
+    const rightans = falseval.filter((rightans) => rightans === falsee); // removing meal from localstorage
 
     array.push(correctAns)
     localStorage.setItem("anser", JSON.stringify(array));
