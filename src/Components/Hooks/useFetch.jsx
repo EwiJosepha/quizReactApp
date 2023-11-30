@@ -1,14 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useState } from "react";
 
 function useFetch() {
-
-  const [postperpage, setPostperpage]= useState(1)
-  const [currentpage, setCurrentpage]= useState(1)
-  const [amount, setAmount]= useState([])
-  // const amount = 1
-  // const navigate = useNavigate();
   const { data, isLoading, error } = useQuery({
     queryKey: ["quizz"],
     queryFn: async () => {
@@ -19,11 +12,7 @@ function useFetch() {
     },
   });
 
-  console.log(data);
 
-  const indexoflastpage = currentpage * postperpage
-  const indexoffirstpost = indexoflastpage - postperpage
-  // const currentpost = data.slice(indexoflastpage, indexoffirstpost);
 
 
   // console.log(data);

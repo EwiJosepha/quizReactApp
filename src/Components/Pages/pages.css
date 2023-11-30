@@ -3,8 +3,6 @@ h1 {
   color: #fff;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 25px;
-  /* padding-top: 2rem; */
-  /* padding-bottom: 2rem; */
 }
 
 .container {
@@ -17,7 +15,6 @@ h3 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: rgb(51, 45, 45);
   font-size: 18px;
-  /* padding: 20px; */
   text-align: center;
 }
 
@@ -25,8 +22,6 @@ h6 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: black;
   font-size: 25px;
-  /* font-weight: 500; */
-  /* padding: 10px; */
   text-align: center;
 }
 
@@ -50,7 +45,6 @@ h6 {
 
 #false:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-
 }
 
 #false {
@@ -60,11 +54,10 @@ h6 {
 }
 
 #quizz {
-  font-size: 25px;
+  font-size: 18px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 600;
-  color: #000;
-  /* padding: 20px; */
+  font-weight: 500;
+  color: #3b2e2e;
 }
 
 .line {
@@ -76,9 +69,8 @@ h6 {
 #title {
   font-size: 25px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 600;
-  color: indigo;
-  padding: 10px;
+  font-weight: 400;
+  color: #4e4747;
 }
 
 span {
@@ -106,6 +98,10 @@ span {
   padding-bottom: 2rem;
 }
 
+.replay {
+  color: #fff;
+}
+
 #truthy {
   width: 5rem;
   height: 2rem;
@@ -118,7 +114,6 @@ span {
 }
 
 .category {
-  margin-top: 30px;
   padding: 10px;
 }
 
@@ -142,14 +137,23 @@ span {
   padding: 20px;
 }
 
+#star {
+  width: 50%;
+  height: 50px;
+  border: none;
+  border-radius: 33px;
+  color: #fff;
+  background-color: deepskyblue;
+  padding: 20px;
+}
+
 #cat {
   color:#3498db;
-  line-height: 2;
-  padding-top: 30px;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 .button {
   display: flex;
@@ -169,8 +173,7 @@ span {
   align-items: center;
   justify-content: center;
   gap: 30px;
-  padding: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .submit {
@@ -211,10 +214,23 @@ span {
   height: 100vh;
 }
 
+.bod {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  height: 50%;
+}
+
+h6 {
+  color: #fff;
+}
+
 .card-header {
   background-color: #3498db;
   color: #fff;
-  padding: 20px;
   text-align: center;
 }
 
@@ -236,12 +252,21 @@ span {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
-  margin: 10px;
+  margin: auto;
+  margin-top: 20px;
   transition: transform 0.3s ease-in-out;
+  padding-bottom: 20px;
 }
 
 .result-card:hover {
   transform: scale(1.05);
+}
+
+h3 {
+  color: #3498db;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .result-card img {
@@ -252,6 +277,10 @@ span {
 
 .result-card-content {
   padding: 20px;
+}
+
+#black {
+  color: #000;
 }
 
 .result-card-title {
