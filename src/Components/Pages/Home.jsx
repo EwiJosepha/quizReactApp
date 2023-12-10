@@ -8,7 +8,7 @@ const navigate = useNavigate()
     {/* <h1>Welcome to Your Favourite Game</h1> */}
     <div className="questions">
       <div className="line">
-      <h3>All you have to do is to Answer<br/> <span id="true">True</span> or <span id="false">False</span></h3>
+      <h3>All you have to do is to Answer <span id="true">True</span> or <span id="false">False</span></h3>
    </div>
      <div className="country">
       <div className="result-card">

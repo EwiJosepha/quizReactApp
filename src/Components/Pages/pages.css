@@ -61,9 +61,8 @@ h6 {
 }
 
 .line {
-  border: 1px solid deeppink;
   width: 100%;
-  height: 100px;
+  height: 50px;
 }
 
 #title {
@@ -75,7 +74,6 @@ h6 {
 
 span {
   color: #fff;
-  padding: 30px;
 }
 
 #fals {
@@ -98,7 +96,7 @@ span {
   padding-bottom: 2rem;
 }
 
-.replay {
+#replay {
   color: #fff;
 }
 
@@ -135,6 +133,7 @@ span {
   color: #fff;
   background-color: #3498db;
   padding: 20px;
+  cursor: pointer;
 }
 
 #star {
@@ -246,7 +245,7 @@ h6 {
 
 
 .result-card {
-  max-width: 300px;
+  max-width: 400px;
   width: 90vw;
   background-color: #3498db;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -255,7 +254,7 @@ h6 {
   margin: auto;
   margin-top: 20px;
   transition: transform 0.3s ease-in-out;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .result-card:hover {

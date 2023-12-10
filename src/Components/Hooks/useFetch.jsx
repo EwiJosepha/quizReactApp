@@ -11,11 +11,6 @@ function useFetch() {
       return res.data.results
     },
   });
-
-
-
-
-  // console.log(data);
   return {data,isLoading,error}
 }
 

@@ -29,11 +29,9 @@ function Questions() {
       navigate(`/Question/${+id + 1}`);
     }
     const newval = data[id].correct_answer;
-    console.log(newval);
     console.log(value);
     if (value === newval) {
       setCounter((counter) => counter + 1);
-      console.log("plus one");
     }
   }
 
@@ -50,7 +48,7 @@ function Questions() {
             </div>
             <div className="category">
               
-               <h5 id="black">Question Category is: 
+               <h5 id="black">Question Category: 
                 <span id="cat">
                 {data[id]?.category}
               </span>

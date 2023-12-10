@@ -7,8 +7,6 @@ import Results from "./Components/Pages/Results";
 import { Appcontext } from "./Components/Hooks/Context";
 import { useState } from "react";
 
-
-
 function App() {
   const client = new QueryClient()
 
