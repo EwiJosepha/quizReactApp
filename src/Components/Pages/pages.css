@@ -40,7 +40,7 @@ h6 {
   border-radius: 1rem;
   width: 8rem;
   height: 2rem;
-  border:  none;
+  border: none;
 }
 
 #false:hover {
@@ -55,7 +55,7 @@ h6 {
 
 #quizz {
   font-size: 18px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 500;
   color: #3b2e2e;
 }
@@ -67,7 +67,7 @@ h6 {
 
 #title {
   font-size: 25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 400;
   color: #4e4747;
 }
@@ -147,12 +147,11 @@ span {
 }
 
 #cat {
-  color:#3498db;
+  color: #3498db;
   font-size: 15px;
   font-weight: 500;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-
 
 .button {
   display: flex;
@@ -243,7 +242,6 @@ h6 {
   text-align: center;
 }
 
-
 .result-card {
   max-width: 400px;
   width: 90vw;
@@ -263,7 +261,7 @@ h6 {
 
 h3 {
   color: #3498db;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: 600;
   font-size: 18px;
 }

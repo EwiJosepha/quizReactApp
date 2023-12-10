@@ -5,7 +5,6 @@ const navigate = useNavigate()
   return (
     <>
     <div className="body">
-    {/* <h1>Welcome to Your Favourite Game</h1> */}
     <div className="questions">
       <div className="line">
       <h3>All you have to do is to Answer <span id="true">True</span> or <span id="false">False</span></h3>
@@ -20,7 +19,7 @@ const navigate = useNavigate()
         <div className="button">
         <button id="star" onClick={()=>{
           navigate("/Question/1")
-        }}>Start!!!</button>
+        }}>Start!</button>
 
         </div>
         </div>
