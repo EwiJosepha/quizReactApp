@@ -297,3 +297,7 @@ h3 {
     margin: auto;
   }
 }
+
+.new {
+  background-color: red;
+}
